@@ -10,9 +10,28 @@ package com.vincent.concurrency.chapter2;
  */
 public class BankVersion2 {
 
+    private final static int MAX = 1000;
+
     public static void main(String[] args) {
 
-        final TicketWindowRunnable ticketWindow = new TicketWindowRunnable();
+
+//        final TicketWindowRunnable ticketWindow = new TicketWindowRunnable();
+
+        final Runnable ticketWindow = ()->{
+            int index = 1;
+            while(index <= MAX){
+                while( index <= MAX){
+                    System.out.println(Thread.currentThread() + " 当前的号码是:" + (index++));
+                    try{
+                        Thread.sleep(100);
+                    }catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        };
+
 
         Thread windowThread1 = new Thread(ticketWindow, "一号窗口");
         Thread windowThread2 = new Thread(ticketWindow, "二号窗口");
