@@ -22,7 +22,7 @@ public class TicketWindowRunnable implements Runnable {
     public void run() {
 
         while(true){
-
+            //1 代码块中变成了单线程. 但是synchronized会影响效率
             synchronized (MONITOR){
                 if(index > MAX){
                     break;
@@ -36,6 +36,7 @@ public class TicketWindowRunnable implements Runnable {
                 System.out.println(Thread.currentThread() + " 的号码是:" + (index++));
 
             }
+            //2
 
         }
     }
