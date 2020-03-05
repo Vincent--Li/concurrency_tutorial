@@ -1,4 +1,4 @@
-package com.vincent.concurrency;
+package com.vincent.concurrency.chapter4;
 
 /**
  * Title:  concurrency_tutorial
