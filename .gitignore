@@ -38,3 +38,5 @@ wechat-teacher-sub-server/.settings/org.eclipse.m2e.core.prefs
 wechat-teacher-sub-server/.settings/org.eclipse.wst.common.project.facet.core.xml
 
 homework/src/main/resources/rebel\.xml
+
+*.class
