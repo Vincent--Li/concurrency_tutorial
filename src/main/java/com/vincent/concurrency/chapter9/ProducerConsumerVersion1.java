@@ -8,7 +8,7 @@ package com.vincent.concurrency.chapter9;
  * @Author Vincent Li
  * @Date 2020/3/11 21:30
  */
-public class ProduceConsumerVersion1 {
+public class ProducerConsumerVersion1 {
 
     private int i = 1;
 
@@ -28,7 +28,7 @@ public class ProduceConsumerVersion1 {
     }
 
     public static void main(String[] args) {
-        ProduceConsumerVersion1 pc = new ProduceConsumerVersion1();
+        ProducerConsumerVersion1 pc = new ProducerConsumerVersion1();
 
         new Thread("P"){
             @Override
