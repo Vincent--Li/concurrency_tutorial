@@ -8,7 +8,12 @@ public class JavaObjectLayout {
 
         JavaObjectLayout object = new JavaObjectLayout();
 
-//        System.out.println(ClassLayout.parseInstance(object).toPrintable());
+        System.out.println(ClassLayout.parseInstance(object).toPrintable());
+
+        object.hashCode();
+
+        System.out.println(ClassLayout.parseInstance(object).toPrintable());
+
         synchronized (object){
             System.out.println(ClassLayout.parseInstance(object).toPrintable());
         }
