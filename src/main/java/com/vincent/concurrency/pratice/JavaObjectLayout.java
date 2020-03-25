@@ -12,5 +12,6 @@ public class JavaObjectLayout {
         synchronized (object){
             System.out.println(ClassLayout.parseInstance(object).toPrintable());
         }
+
     }
 }
